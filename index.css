@@ -1,0 +1,30 @@
+/*styles for React App*/
+body {
+    background-color:#1D3973; 
+    font-family:"Arial";
+    color:#F2F2F2;
+    font-size: 32pt;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;/*hides scroll bars */ 
+}
+
+#btnLike {
+    padding:12px;
+    padding-right:24px;
+    background-color: #182E59;
+    color: inherit;
+    font-size: 12pt;
+    border: 1px solid #F2F2F2;
+    transition: background-color 0.25s linear, color 0.25s linear;
+}
+
+#btnLike:hover {
+    color: #182E59;
+    border-color:#182E59;
+    background-color: #F2F2F2;
+    cursor: pointer;
+}
