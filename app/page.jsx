@@ -5,7 +5,7 @@ function Header ({title}) {
   return <h1>{title}</h1>
 }
 
-function HomePage () {
+export default function HomePage () {
 
   const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton']
   const [likes, setLikes] = React.useState(0);
