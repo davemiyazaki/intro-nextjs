@@ -28,6 +28,7 @@
                 color: #182E59;
                 border-color:#182E59;
                 background-color: #F2F2F2;
+                cursor: pointer;
             }
         </style>
         <div id = "app"></div>
@@ -38,13 +39,17 @@
         <script type="text/jsx">
             const app = document.getElementById("app")
             const root = ReactDOM.createRoot(app)
-            const likes = 0;
+
             const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton']
             function Header ({title}) {
                 return <h1>{title}</h1>
             }
 
             function HomePage () {
+                const [likes, setLikes] = React.useState(0);
+                function handleClick (){
+                    return setLikes(likes + 1);
+                } 
                 return (
                     <div>
                         <Header title="Hello World!"/>
@@ -55,7 +60,7 @@
                                 })
                             }
                         </ul>
-                        <button id="btnLike">Likes {likes}</button>
+                        <button id="btnLike" onClick={handleClick}>Likes {likes}</button>
                     </div>
                 )
             }
