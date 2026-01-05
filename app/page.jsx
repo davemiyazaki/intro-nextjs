@@ -1,6 +1,6 @@
-import {useState} from 'react';
 import "./index.css";
-
+import "./like-button"
+import LikeButton from "./like-button";
 function Header ({title}) {
   return <h1>{title}</h1>
 }
@@ -8,10 +8,6 @@ function Header ({title}) {
 export default function HomePage () {
 
   const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton']
-  const [likes, setLikes] = React.useState(0);
-  function handleClick (){
-      return setLikes(likes + 1);
-  } 
   return (
       <div>
           <Header title="Hello World!"/>
@@ -22,11 +18,9 @@ export default function HomePage () {
                   })
               }
           </ul>
-          <button id="btnLike" onClick={handleClick}>Likes {likes}</button>
+        <LikeButton />
       </div>
   )
 }
 
-root.render(<HomePage />)
-
-//on CHAPTER 9
+//on CHAPTER 10 
